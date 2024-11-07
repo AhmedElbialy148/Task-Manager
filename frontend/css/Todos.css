@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
+
+.todos__form,
+.todos__list {
+  width: 90%;
+  max-width: 40rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 1rem;
+}
+.todos__form {
+  margin: 3rem auto 1.2rem auto;
+}
+.todos__list {
+  margin: 1.2rem auto 3rem auto;
+  list-style: none;
+  padding-left: 2rem;
+}
+.controls-container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 40rem;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 1fr;
+  font-size: 1.125rem;
+}
+.controls-container div {
+  align-self: center;
+  justify-self: center;
+}
+.controls-container select {
+  background-color: var(--darker);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.form-header {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  justify-self: center;
+  color: var(--gray);
+}
+
+.todos__form input {
+  font: inherit;
+  margin-right: 1rem;
+  background-color: var(--darker);
+  color: var(--light);
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+}
+.todos__form input::placeholder {
+  color: var(--gray);
+}
+input:-internal-autofill-selected {
+  color: var(--light) !important;
+  background-color: var(--darker) !important;
+}
+
+#priority-input,
+#priority-input-list {
+  color: var(--light);
+  background-color: var(--darker);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+}
+
+#priority-input-list.select-disabled {
+  appearance: none;
+  color: #fff;
+  background-color: transparent;
+  font-size: 1.1rem;
+}
+#priority-input-list.select-enabled {
+  color: #fff;
+  background-color: var(--darker);
+  font-size: 1.1rem;
+  margin-right: 1rem;
+}
+
+.input-container {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  margin: 1rem 0rem;
+  align-items: center;
+}
+
+.todo-list-container {
+  display: flex;
+  justify-self: end;
+}
+.todos__list li {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--darkest);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  transition: 0.4s;
+}
+.todos__list li.open-date {
+  margin-top: 2.5rem;
+}
+
+.todos__list li input {
+  font-size: 1rem;
+}
+
+.todos__list li span {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: 0.5s;
+  background-color: var(--darkest);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  z-index: -1;
+  transition: 0.4s;
+  width: max-content;
+}
+.todos__list li span.open {
+  bottom: -48%;
+}
+
+.todos__list li input:not(:read-only) {
+  color: var(--pink);
+}
+
+.todo__actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.todos__list li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -4%;
+  transform: translate(0, -50%);
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 50%;
+  background-image: url(../images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+.todos__list li.completed::before {
+  background-image: url(../images/green-check1.png);
+}
+.todos__list li.completed input {
+  text-decoration: line-through;
+  color: rgb(41, 191, 41);
+}
+
+.trash-icon {
+  fill: crimson;
+  width: 2rem;
+  height: 2rem;
+}
+.delete-btn {
+  background-image: none;
+  color: crimson;
+}
+
+.edit-icon {
+  width: 100%;
+  height: 100%;
+}
+.todo__actions button.edit-icon-btn {
+  width: 2rem;
+  height: 2rem;
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  clip-path: url(#mask);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.1rem 0.2 0 0.2;
+}
+
+.error-msg-container {
+  width: 90%;
+  max-width: 40rem;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  text-align: center;
+  color: red;
+}

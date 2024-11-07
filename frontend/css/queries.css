@@ -1,0 +1,128 @@
+/*************************/
+/* BELOW 760PX */
+/*************************/
+/* 760px / 16 =  47.5em*/
+@media (max-width: 47.5em) {
+  html {
+    font-size: 90%;
+  }
+}
+/*************************/
+/* BELOW 650PX */
+/*************************/
+/* 650px / 16 = 40.625em*/
+@media (max-width: 40.625em) {
+  html {
+    font-size: 80%;
+  }
+}
+/*************************/
+/* BELOW 520PX */
+/*************************/
+/* 520PX / 16 = 32.5em*/
+@media (max-width: 32.5em) {
+  html {
+    /* default font size : 16px
+    9px = 56.25% */
+    font-size: 70%;
+  }
+  .controls-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 0.5rem;
+  }
+  .show-date-btn-container {
+    grid-column: 1 / 3;
+  }
+}
+
+/*************************/
+/* BELOW 440PX */
+/*************************/
+/* 440PX / 16 = 27.5em*/
+@media (max-width: 27.5em) {
+  .todos__list li::before {
+    left: -5%;
+  }
+  .form-header {
+    width: 100%;
+  }
+}
+/*************************/
+/* BELOW 360PX */
+/*************************/
+/* 360PX / 16 = 22.5em*/
+@media (max-width: 22.5em) {
+  .trash-icon {
+    width: 1.6rem;
+  }
+  .todo__actions button.edit-icon-btn {
+    width: 1.6rem;
+  }
+}
+/*************************/
+/* BELOW 345PX */
+/*************************/
+/* 345PX / 16 = 21.5625em*/
+@media (max-width: 21.5625em) {
+  html {
+    font-size: 65%;
+  }
+  .todos__list li::before {
+    left: -6%;
+  }
+  .todos__list li {
+    padding: 1rem 0.5rem;
+  }
+}
+
+/*************************/
+/* BELOW 320PX */
+/*************************/
+/* 320PX / 16 = 20em*/
+@media (max-width: 20em) {
+  .todos__list li {
+    padding-bottom: 3rem;
+    grid-template-columns: 1.9fr 1fr;
+  }
+
+  .todo__actions {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 0);
+    gap: 2rem;
+  }
+
+  .todos__list li span.open {
+    bottom: -34%;
+  }
+  .todos__list li::before {
+    left: -6.3%;
+  }
+  .todos__form {
+    margin-bottom: 0.5rem;
+  }
+  .controls-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .show-date-btn-container {
+    grid-column: 1/2;
+  }
+
+  .input-container {
+    position: relative;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  #priority-input {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(0, 120%);
+  }
+  #text-input {
+    margin: 0;
+  }
+}

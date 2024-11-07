@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO App</title>
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/Todos.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+    <script type="module" src="./js/app.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="todos__form">
+        <form class="todo-form" netlify>
+          <h1 class="form-header">Todo App</h1>
+          <div class="input-container">
+            <input
+              id="text-input"
+              placeholder="Enter your task"
+              class="todo-input text-input"
+              type="text"
+              autocomplete="off"
+            />
+
+            <select title="priority-input" id="priority-input">
+              <optgroup label="Priority Levels">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </optgroup>
+            </select>
+          </div>
+          <button class="submit-btn" type="submit">Add Todo</button>
+        </form>
+      </div>
+      <div class="error-msg-container"></div>
+      <div class="controls-container">
+        <div class="show-date-btn-container">
+          <button class="show-date-btn">Show Date</button>
+        </div>
+        <div>
+          <label for="filter-select">Filter:</label>
+          <select name="" id="filter-select">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+        <div>
+          <label for="sort-select">Sort:</label>
+          <select name="" id="sort-select">
+            <option value="oldest-to-newest">Oldest to Newest</option>
+            <option value="newest-to-oldest">Newest to Oldest</option>
+            <option value="priority">Priority</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <a href="index.html" class="to-form-link" hidden>hidden</a>
+  </body>
+</html>

@@ -1,0 +1,210 @@
+@import "https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap";
+.todos__form, .todos__list {
+  width: 90%;
+  max-width: 40rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px #00000042;
+}
+
+.todos__form {
+  margin: 3rem auto 1.2rem;
+}
+
+.todos__list {
+  margin: 1.2rem auto 3rem;
+  padding-left: 2rem;
+  list-style: none;
+}
+
+.controls-container {
+  grid-template-columns: .7fr 1fr 1fr;
+  width: 90%;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: .5rem;
+  font-size: 1.125rem;
+  display: grid;
+}
+
+.controls-container div {
+  place-self: center;
+}
+
+.controls-container select {
+  background-color: var(--darker);
+  border-radius: .5rem;
+  margin-left: .5rem;
+  padding: .5rem;
+  font-size: 1rem;
+}
+
+.form-header {
+  text-align: center;
+  color: var(--gray);
+  justify-self: center;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.todos__form input {
+  font: inherit;
+  background-color: var(--darker);
+  color: var(--light);
+  border-radius: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+
+.todos__form input::placeholder {
+  color: var(--gray);
+}
+
+input:-internal-autofill-selected {
+  color: var(--light) !important;
+  background-color: var(--darker) !important;
+}
+
+#priority-input, #priority-input-list {
+  color: var(--light);
+  background-color: var(--darker);
+  border-radius: .5rem;
+  padding: .5rem;
+  font-size: 1.25rem;
+}
+
+#priority-input-list.select-disabled {
+  appearance: none;
+  color: #fff;
+  background-color: #0000;
+  font-size: 1.1rem;
+}
+
+#priority-input-list.select-enabled {
+  color: #fff;
+  background-color: var(--darker);
+  margin-right: 1rem;
+  font-size: 1.1rem;
+}
+
+.input-container {
+  grid-template-columns: 5fr 1fr;
+  align-items: center;
+  margin: 1rem 0;
+  display: grid;
+}
+
+.todo-list-container {
+  justify-self: end;
+  display: flex;
+}
+
+.todos__list li {
+  background-color: var(--darkest);
+  border-radius: 1rem;
+  grid-template-columns: 1.25fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  transition: all .4s;
+  display: grid;
+  position: relative;
+}
+
+.todos__list li.open-date {
+  margin-top: 2.5rem;
+}
+
+.todos__list li input {
+  font-size: 1rem;
+}
+
+.todos__list li span {
+  background-color: var(--darkest);
+  z-index: -1;
+  border-radius: .5rem;
+  width: max-content;
+  padding: .5rem 1rem;
+  transition: all .4s;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.todos__list li span.open {
+  bottom: -48%;
+}
+
+.todos__list li input:not(:read-only) {
+  color: var(--pink);
+}
+
+.todo__actions {
+  margin: 0 -.5rem;
+  display: flex;
+}
+
+.todos__list li:before {
+  content: "";
+  cursor: pointer;
+  background-image: url("unchecked.2156204e.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  top: 50%;
+  left: -4%;
+  transform: translate(0, -50%);
+}
+
+.todos__list li.completed:before {
+  background-image: url("green-check1.f296347d.png");
+}
+
+.todos__list li.completed input {
+  color: #29bf29;
+  text-decoration: line-through;
+}
+
+.trash-icon {
+  fill: #dc143c;
+  width: 2rem;
+  height: 2rem;
+}
+
+.delete-btn {
+  color: #dc143c;
+  background-image: none;
+}
+
+.edit-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.todo__actions button.edit-icon-btn {
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  clip-path: url("#mask");
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin: .1rem .2px 0;
+  display: flex;
+}
+
+.error-msg-container {
+  text-align: center;
+  color: red;
+  width: 90%;
+  max-width: 40rem;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=app.198fa3af.css.map */

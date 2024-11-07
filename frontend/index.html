@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sign Up | Log In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+    <script type="module" src="./js/form.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title-text">
+        <h1 class="title login">Account</h1>
+        <h1 class="title signup">Account</h1>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked />
+          <input type="radio" name="slide" id="signup" />
+          <label for="login" class="slide login">Login</label>
+          <label for="signup" class="slide signup">SignUp</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="error-msg-container"></div>
+        <div class="form-inner">
+          <form action="" class="form login-form" netlify>
+            <div class="field">
+              <input
+                type="text"
+                class="login-email"
+                placeholder="Email  Address"
+                required
+                autocomplete="email"
+              />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                class="login-password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="pass-link">
+              <a href="reset-email.html" class="to-reset-email-link" hidden></a>
+              <button class="btn-reset">Reset password?</button>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <button type="submit" class="login-btn">Login</button>
+            </div>
+            <div class="signup-link">
+              Don't Have Account?
+              <button class="btn-create-new">Create A New</button>
+            </div>
+          </form>
+          <form action="" class="form signup-form" netlify>
+            <div class="field">
+              <input
+                type="text"
+                class="signup-email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                class="signup-password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                class="confirm-password"
+                placeholder="Confirm Password"
+                required
+              />
+            </div>
+            <div class="show-password-container">
+              <input
+                type="checkbox"
+                id="show-pass-checkbox"
+                value="unchecked"
+              />
+              <label for="show-pass-checkbox">Show Password</label>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <button type="submit" class="signup-btn">SignUp</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <a href="app.html" hidden class="to-app-link">hidden</a>
+  </body>
+</html>

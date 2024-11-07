@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reset Password</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+    <script type="module" src="./js/reset-verif.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Reset Password</div>
+      </div>
+      <div class="form-container">
+        <div class="error-msg-container"></div>
+        <div class="form-inner">
+          <form action="" class="form verify-code-form" netlify>
+            <div class="field">
+              <p>Please enter the verification code sent via your email.</p>
+            </div>
+            <div class="field">
+              <input
+                type="text"
+                class="verification-code"
+                placeholder="Verification Code"
+                required
+              />
+            </div>
+            <div class="pass-link">
+              <a href="index.html" class="to-form-link" hidden></a>
+              <button class="to-form-btn">Sign Up | Log In</button>
+            </div>
+
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <button type="submit" class="verify-code-btn">Verify</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <a href="reset-new-password.html" hidden class="to-newPassword-link"></a>
+  </body>
+</html>
